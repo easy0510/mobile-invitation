@@ -916,15 +916,15 @@
         </p>
 
         <div class="map-buttons-container">
-          <a class="map-button" href="https://map.naver.com/v5/search/서울시%20성북구%20종암로%2013%20고려대학교%20교우회관" target="_blank" rel="noopener" aria-label="네이버 지도에서 예식장 보기">
+          <a class="map-button" href="https://map.naver.com/p/entry/place/18912226" target="_blank" rel="noopener" aria-label="네이버 지도에서 예식장 보기">
             <img class="map-icon" src="./images/navermap.webp" alt="" />
             <span>네이버지도</span>
           </a>
-          <a class="map-button" href="https://map.kakao.com/link/search/서울시%20성북구%20종암로%2013%20고려대학교%20교우회관" target="_blank" rel="noopener" aria-label="카카오맵에서 예식장 보기">
+          <a class="map-button" href="https://map.kakao.com/link/map/고려대학교%20교우회관,37.5919972,127.035654" target="_blank" rel="noopener" aria-label="카카오맵에서 예식장 보기">
             <img class="map-icon" src="./images/kakaomap.png" alt="" />
             <span>카카오맵</span>
           </a>
-          <a class="map-button" href="tmap://search?name=고려대학교%20교우회관" aria-label="티맵에서 예식장 보기">
+          <a class="map-button" href="tmap://route?goalname=고려대학교%20교우회관&amp;goalx=127.035654&amp;goaly=37.5919972" aria-label="티맵에서 예식장 보기">
             <img class="map-icon" src="./images/tmap.svg" alt="" />
             <span>티맵</span>
           </a>
@@ -971,14 +971,14 @@
       <h2 class="account-title">마음 전하실 곳</h2>
 
       <div class="account-buttons">
-        <button class="account-open-button" type="button" data-name="심석용" data-bank="국민은행">신랑 측 계좌번호</button>
-        <button class="account-open-button" type="button" data-name="은아" data-bank="신한은행">신부 측 계좌번호</button>
+        <button class="account-open-button" type="button" data-name="심석용" data-bank="토스뱅크" data-account="100005728552">신랑 측 계좌번호</button>
+        <button class="account-open-button" type="button" data-name="은아" data-bank="신한은행" data-account="12345678">신부 측 계좌번호</button>
       </div>
     </section>
 
     <dialog class="account-dialog" id="account-dialog">
       <h3 id="dialog-account-title">계좌번호</h3>
-      <p class="dialog-account-number" id="dialog-account-number">12345678</p>
+      <p class="dialog-account-number" id="dialog-account-number"></p>
       <div class="dialog-actions">
         <button type="button" id="close-account-dialog">닫기</button>
         <button class="copy-account" type="button" id="copy-account">복사</button>
@@ -1015,7 +1015,7 @@
     const KAKAO_JS_KEY = '';
 
     const accountDialog = document.getElementById('account-dialog');
-    const accountNumber = '12345678';
+    let selectedAccountNumber = '';
 
     const galleryDialog = document.getElementById('gallery-viewer');
     const galleryImage = document.getElementById('gallery-viewer-image');
@@ -1059,8 +1059,10 @@
 
     document.querySelectorAll('.account-open-button').forEach((button) => {
       button.addEventListener('click', () => {
+        selectedAccountNumber = button.dataset.account;
         document.getElementById('dialog-account-title').textContent = `${button.dataset.name} · ${button.dataset.bank}`;
-        document.getElementById('dialog-account-number').textContent = accountNumber;
+        document.getElementById('dialog-account-number').textContent = selectedAccountNumber;
+        document.getElementById('copy-account').textContent = '복사';
         accountDialog.showModal();
       });
     });
@@ -1069,7 +1071,7 @@
     document.getElementById('copy-account').addEventListener('click', async (event) => {
       const button = event.currentTarget;
       try {
-        await navigator.clipboard.writeText(accountNumber);
+        await navigator.clipboard.writeText(selectedAccountNumber);
         button.textContent = '복사됨';
         setTimeout(() => { button.textContent = '복사'; }, 1200);
       } catch (error) {
