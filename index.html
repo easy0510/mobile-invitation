@@ -11,11 +11,11 @@
   <meta property="og:title" content="석용 &amp; 은아 결혼식에 초대합니다" />
   <meta property="og:description" content="2027년 5월 29일 토요일 오후 5시 · 고려대학교 교우회관 1층" />
   <meta property="og:url" content="https://easy0510.github.io/mobile-invitation/" />
-  <meta property="og:image" content="https://easy0510.github.io/mobile-invitation/images/1000004240.jpg" />
+  <meta property="og:image" content="https://easy0510.github.io/mobile-invitation/images/2026-11-16%2023_12_47.477%2B0900.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1287" />
-  <meta property="og:image:height" content="960" />
-  <meta property="og:image:alt" content="장미 꽃다발과 석용, 은아의 사진" />
+  <meta property="og:image:width" content="3238" />
+  <meta property="og:image:height" content="4857" />
+  <meta property="og:image:alt" content="따뜻한 햇살 아래 마주 보고 있는 석용과 은아의 웨딩 사진" />
   <link rel="canonical" href="https://easy0510.github.io/mobile-invitation/" />
   <style>
     @font-face {
@@ -27,17 +27,21 @@
     }
 
     :root {
-      --primary-color: #B99493;
-      --primary-color-light: #d2bdbc;
-      --primary-color-dark: #8e5f5d;
+      --primary-color: #756547;
+      --primary-color-light: #cabb9d;
+      --primary-color-dark: #5b5038;
       --white: #FFF;
-      --bg-color: #EFEAE4;
-      --font-color-default: #434343;
-      --font-color-light: #a3a3a3;
+      --bg-color: #e6dfd0;
+      --surface-color: #faf7ef;
+      --surface-color-alt: #f0eadb;
+      --card-color: #fffdf7;
+      --font-color-default: #413c31;
+      --font-color-secondary: #645c4d;
+      --font-color-light: #827866;
       --content-max-width: 600px;
       --body-font-size: 1.125rem;
-      --cover-overlay: rgba(75, 56, 52, 0.28);
-      --line: rgba(185, 148, 147, 0.22);
+      --cover-overlay: linear-gradient(180deg, rgba(43, 37, 23, 0.22) 0%, rgba(43, 37, 23, 0.04) 42%, rgba(43, 37, 23, 0.16) 65%, rgba(43, 37, 23, 0.68) 100%);
+      --line: rgba(117, 101, 71, 0.22);
     }
 
     * { box-sizing: border-box; }
@@ -65,7 +69,7 @@
     .app {
       width: min(430px, 100vw);
       min-height: 100vh;
-      background: #f7f2ee;
+      background: var(--surface-color);
       overflow: visible;
       box-shadow: 0 24px 60px rgba(0,0,0,0.08);
     }
@@ -73,7 +77,8 @@
     .cover {
       position: relative;
       min-height: 760px;
-      background-image: linear-gradient(var(--cover-overlay), var(--cover-overlay)), url('./images/1000004240.jpg');
+      background-color: var(--primary-color-dark);
+      background-image: var(--cover-overlay), url('./images/2026-11-16%2023_12_47.477%2B0900.jpg');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -110,6 +115,7 @@
       z-index: 2;
       text-align: center;
       color: white;
+      text-shadow: 0 2px 12px rgba(43, 37, 23, 0.45);
     }
 
     .names-en-box {
@@ -155,7 +161,7 @@
     }
 
     .letter {
-      background: #fffdfb;
+      background: var(--surface-color);
       padding: 48px 28px 28px;
       text-align: center;
     }
@@ -192,7 +198,7 @@
     .letter-container {
       line-height: 1.9;
       font-size: 0.95rem;
-      color: #555;
+      color: var(--font-color-secondary);
     }
 
     .letter-container .letter {
@@ -202,7 +208,7 @@
       text-align: center;
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #545454;
+      color: var(--font-color-secondary);
     }
 
     .family-description {
@@ -233,11 +239,11 @@
       max-width: 600px;
       margin: 0 auto;
       display: block;
-      background: #fffdfb;
+      background: var(--surface-color);
     }
 
     .calendar {
-      background: #f9f4f1;
+      background: var(--surface-color-alt);
       padding: 24px 28px 18px;
       text-align: center;
     }
@@ -280,7 +286,7 @@
     .countdown-message {
       margin: 0;
       font-size: 0.9rem;
-      color: #666;
+      color: var(--font-color-secondary);
       line-height: 1.7;
     }
 
@@ -314,7 +320,7 @@
       font-size: var(--body-font-size);
     }
 
-    .calendar-weekdays span:first-child { color: #b77c78; }
+    .calendar-weekdays span:first-child { color: #9a624b; }
     .calendar-day,
     .calendar-empty {
       display: grid;
@@ -348,11 +354,11 @@
       padding: 12px 20px;
       font-size: 0.9rem;
       font-weight: 600;
-      box-shadow: 0 8px 18px rgba(185, 148, 147, 0.22);
+      box-shadow: 0 8px 18px var(--line);
     }
 
     .location {
-      background: #fffdfb;
+      background: var(--surface-color);
       padding: 20px 20px 8px;
     }
 
@@ -362,7 +368,7 @@
     }
 
     .location-content {
-      background: #fff;
+      background: var(--card-color);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 18px 16px;
@@ -373,7 +379,7 @@
       margin: 0 0 12px;
       font-size: 0.95rem;
       line-height: 1.7;
-      color: #4a4a4a;
+      color: var(--font-color-default);
       text-align: center;
     }
 
@@ -381,7 +387,7 @@
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--line);
-      background: #f4f1ee;
+      background: var(--surface-color-alt);
       margin-bottom: 14px;
     }
 
@@ -430,7 +436,7 @@
     }
 
     .account-trapezoid {
-      background: #fffdfb;
+      background: var(--surface-color);
       padding: 36px 20px 10px;
     }
 
@@ -449,7 +455,7 @@
     }
 
     .account-accordion-item {
-      background: #fff;
+      background: var(--card-color);
       border: 1px solid var(--line);
       border-radius: 14px;
       overflow: hidden;
@@ -459,7 +465,7 @@
     .account-accordion-button {
       width: 100%;
       border: none;
-      background: #fff;
+      background: var(--card-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -484,7 +490,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.25s ease;
-      background: #faf6f4;
+      background: var(--surface-color-alt);
     }
 
     .account-card {
@@ -513,15 +519,15 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      background: white;
-      border: 1px solid rgba(185, 148, 147, 0.16);
+      background: var(--card-color);
+      border: 1px solid var(--line);
       border-radius: 12px;
       padding: 12px 14px;
     }
 
     .account-card-bank-name {
       font-size: 0.75rem;
-      color: #777;
+      color: var(--font-color-light);
       margin-bottom: 4px;
     }
 
@@ -529,13 +535,13 @@
       font-size: 0.9rem;
       font-weight: 700;
       letter-spacing: 0.03em;
-      color: #2c2c2c;
+      color: var(--font-color-default);
       word-break: break-all;
     }
 
     .account-card-copy-button {
-      border: 1px solid rgba(185, 148, 147, 0.4);
-      background: #fff;
+      border: 1px solid var(--primary-color-light);
+      background: var(--card-color);
       border-radius: 8px;
       color: var(--primary-color-dark);
       padding: 8px 10px;
@@ -555,7 +561,7 @@
     }
 
     .gallery {
-      background: #f9f4f1;
+      background: var(--surface-color-alt);
       padding: 36px 20px 42px;
     }
 
@@ -707,7 +713,7 @@
       padding: 15px 16px;
       border: 1px solid var(--line);
       border-radius: 6px;
-      background: #fff;
+      background: var(--card-color);
       color: var(--font-color-default);
       font-weight: 600;
       text-align: left;
@@ -718,6 +724,7 @@
       padding: 24px;
       border: 0;
       border-radius: 8px;
+      background: var(--card-color);
       color: var(--font-color-default);
       box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
     }
@@ -726,7 +733,7 @@
     .account-dialog h3 { margin: 0 0 18px; color: var(--primary-color-dark); }
     .dialog-account-number { margin: 0 0 18px; font-weight: 700; letter-spacing: 0.08em; }
     .dialog-actions { display: flex; justify-content: flex-end; gap: 8px; }
-    .dialog-actions button { padding: 9px 13px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+    .dialog-actions button { padding: 9px 13px; border: 1px solid var(--line); border-radius: 5px; background: var(--card-color); }
     .dialog-actions .copy-account { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
 
     .rsvp-link-container {
@@ -739,7 +746,7 @@
 
     .rsvp-copy {
       margin: 0;
-      color: #666;
+      color: var(--font-color-secondary);
       line-height: 1.7;
     }
 
@@ -757,12 +764,12 @@
     }
 
     .guestbook-section {
-      background: #fffdfb;
+      background: var(--surface-color);
       padding: 18px 20px 0;
     }
 
     .share-section {
-      background: #fffdfb;
+      background: var(--surface-color);
       padding: 18px 20px 30px;
     }
 
@@ -790,7 +797,7 @@
       letter-spacing: 0.2em;
       padding: 20px 20px 28px;
       font-size: var(--body-font-size);
-      background: #fffdfb;
+      background: var(--surface-color);
     }
 
     .header .subtitle,
@@ -1088,7 +1095,7 @@
     async function loadGallery() {
       try {
         const files = await getGalleryFiles();
-        const excludedNames = new Set(['kakaomap', 'navermap', 'tmap', 'tmaps', '1000004240']);
+        const excludedNames = new Set(['kakaomap', 'navermap', 'tmap', 'tmaps', '1000004240', '2026-11-16 23_12_47.477+0900']);
         galleryItems = files
           .filter((file) => {
             if (file.type !== 'file') return false;
@@ -1196,7 +1203,7 @@
             content: {
               title: shareTitle,
               description: shareDescription,
-              imageUrl: new URL('./images/1000004240.jpg', shareUrl).href,
+              imageUrl: new URL('./images/2026-11-16%2023_12_47.477%2B0900.jpg', shareUrl).href,
               link: { mobileWebUrl: shareUrl, webUrl: shareUrl }
             },
             buttons: [{ title: '청첩장 보기', link: { mobileWebUrl: shareUrl, webUrl: shareUrl } }]
